@@ -149,7 +149,7 @@ function App() {
                                                     a.isCompleted -
                                                     b.isCompleted
                                             )
-                                           
+
                                             .map((todo) => {
                                                 return (
                                                     <li
@@ -232,7 +232,7 @@ function App() {
                                                     a.isCompleted -
                                                     b.isCompleted
                                             )
-                                            
+
                                             .map((todo) => {
                                                 return (
                                                     <li
@@ -315,7 +315,7 @@ function App() {
                                                     a.isCompleted -
                                                     b.isCompleted
                                             )
-                                          
+
                                             .map((todo) => {
                                                 return (
                                                     <li
@@ -326,7 +326,7 @@ function App() {
                                                             <span
                                                                 onClick={() =>
                                                                     completeTodo(
-                                                                        todo.id
+                                                                        todo
                                                                     )
                                                                 }
                                                                 className={`w-[25px]  h-[25px] rounded-md ${
@@ -334,7 +334,7 @@ function App() {
                                                                         ? "border-[3px] border-gray-300"
                                                                         : "bg-blue-400"
                                                                 }`}
-                                                            />
+                                                            ></span>
                                                             <p
                                                                 className={`font-medium text-[17px] ${
                                                                     todo.isCompleted
