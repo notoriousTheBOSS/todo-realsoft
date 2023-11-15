@@ -149,15 +149,7 @@ function App() {
                                                     a.isCompleted -
                                                     b.isCompleted
                                             )
-                                            .sort(
-                                                (a, b) =>
-                                                    a.title
-                                                        .match(hourRegex)[0]
-                                                        .slice(0, 2) -
-                                                    b.title
-                                                        .match(hourRegex)[0]
-                                                        .slice(0, 2)
-                                            )
+                                           
                                             .map((todo) => {
                                                 return (
                                                     <li
@@ -240,15 +232,7 @@ function App() {
                                                     a.isCompleted -
                                                     b.isCompleted
                                             )
-                                            .sort(
-                                                (a, b) =>
-                                                    a.title
-                                                        .match(hourRegex)[0]
-                                                        .slice(0, 2) -
-                                                    b.title
-                                                        .match(hourRegex)[0]
-                                                        .slice(0, 2)
-                                            )
+                                            
                                             .map((todo) => {
                                                 return (
                                                     <li
@@ -331,15 +315,7 @@ function App() {
                                                     a.isCompleted -
                                                     b.isCompleted
                                             )
-                                            .sort(
-                                                (a, b) =>
-                                                    a.title
-                                                        .match(hourRegex)[0]
-                                                        .slice(0, 2) -
-                                                    b.title
-                                                        .match(hourRegex)[0]
-                                                        .slice(0, 2)
-                                            )
+                                          
                                             .map((todo) => {
                                                 return (
                                                     <li
