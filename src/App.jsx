@@ -146,6 +146,13 @@ function App() {
                                         {bugun
                                             .sort(
                                                 (a, b) =>
+                                                    b.title.match(hourRegex)
+                                                        .getHours -
+                                                    a.title.match(hourRegex)
+                                                        .getHours
+                                            )
+                                            .sort(
+                                                (a, b) =>
                                                     a.isCompleted -
                                                     b.isCompleted
                                             )
@@ -342,10 +349,23 @@ function App() {
                                                                         : ""
                                                                 }`}
                                                             >
-                                                                {!todo?.title.match(
+                                                                {todo?.title.match(
                                                                     dateRegex
-                                                                ) &&
-                                                                    todo?.title}
+                                                                )
+                                                                    ? todo?.title
+                                                                          .replace(
+                                                                              todo.title.match(
+                                                                                  dateRegex
+                                                                              ),
+                                                                              ""
+                                                                          )
+                                                                          .replace(
+                                                                              todo.title.match(
+                                                                                  hourRegex
+                                                                              ),
+                                                                              ""
+                                                                          )
+                                                                    : todo?.title}
                                                             </p>
                                                         </span>
                                                         <p
@@ -361,7 +381,7 @@ function App() {
                                                                 ? todo.title.match(
                                                                       dateRegex
                                                                   )
-                                                                : new Date().toLocaleDateString()}
+                                                                : ""}
                                                             ,
                                                             {todo.title.match(
                                                                 hourRegex
